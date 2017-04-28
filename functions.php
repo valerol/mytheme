@@ -3,12 +3,13 @@
 function mytheme_post_title_suffix( $title ) {
 
 	if ( is_single() ) {
-		
 		return $title . get_option( 'mytheme_post_title_suffix', ' Hello, Fest Agency!' );
 	}
 }
 
-add_filter( 'the_title', 'mytheme_post_title_suffix' );
+if ( ! is_admin() ) {
+	add_filter( 'the_title', 'mytheme_post_title_suffix' );
+}
 
 function mytheme_customize_register() {
 
