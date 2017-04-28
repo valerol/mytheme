@@ -1,4 +1,4 @@
-<?
+<?php
 
 function mytheme_post_title_suffix( $title ) {
 
